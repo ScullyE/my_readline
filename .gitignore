@@ -1,0 +1,6 @@
+*.o
+*tests/
+my_readline
+testsmain.c
+.*
+!.gitignore
