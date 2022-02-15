@@ -51,6 +51,9 @@ char *my_readline(int _fd){
 
 int nullterm_read(int _fd, char* _readstring, int _size){ //Because null termination is good.
     int ret = read(_fd, _readstring, _size);
+    if(ret < 1){
+        return -1;
+    }
     *(_readstring+ret) = '\0';
     return ret;
 }

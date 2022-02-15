@@ -1,7 +1,7 @@
 
 #include "lib/my_readline.h"
 
-int main(){ //main prints up to 10 lines of a provided file, see readline function below
+int main(){ //main prints up to 10 lines of a provided file
     const char* filename = "tests/testfile.txt";
     int fd = open(filename, O_RDONLY);
     char* printstring = NULL;
@@ -10,7 +10,7 @@ int main(){ //main prints up to 10 lines of a provided file, see readline functi
         printstring = my_readline(fd);
 
         if(printstring == NULL){
-            //printf("EOF!\n");
+            printf("EOF or error!\n");
             break;
         }
 
